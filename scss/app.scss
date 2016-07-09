@@ -49,12 +49,22 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+// TABLE OF CONTENTS
+// 1. Scaffolding
+// 2. Navbar
+// 3. Header
+// 4. Section #accommodation
+// 5. Section #maps
+// 6. Section #testimonials
+// 7. Section #about
+// 8. Footer
 
-// SCAFFOLDING
+
+// 1. SCAFFOLDING
 // --------------------
 main {
   padding: {
-    left: 20px;
+    left: 10px;
     right: 10px;}
     
   max-width: 750px;
@@ -63,7 +73,7 @@ main {
   
   @include breakpoint(medium){
     padding: {
-    left: 25px;
+    left: 15px;
     right: 15px;}}
 } //main
   
@@ -77,14 +87,10 @@ h2 {
   text-align: center;
   margin-bottom: 2rem;}
 
-h3 {
-  margin-left: -10px;
-  margin-top: 1.75rem;}
-
-h4,h5,h6 {
+h4, h5, h6 {
   font-family: $body-font-family;}
   
-button {
+button:not(.close-button) {
   @include button-base;
   @include button-style($primary-color, darken($primary-color, 10%), $white);
   margin-top: 1rem}
@@ -97,15 +103,12 @@ strong {
   color: $primary-color;}
 
 p, li, a {
-  font-size: 0.875rem; //14px
+  font-size: 0.9275rem; //15px
   
   @include breakpoint(medium) {
-    font-size: 0.9275rem;} //15px}
-    
-  @include breakpoint(large) {
-    font-size: 1rem;}}
+    font-size: 1rem;}} 
 
-// NAVBAR
+// 2. NAVBAR
 // --------------------
 nav {
   #menu-toggle {
@@ -149,8 +152,9 @@ nav {
     
     @include breakpoint(medium) {
       @include flex;
-      @include flex-align(justify, middle);
-      height: 50px;}
+      @include flex-align(spaced, middle);
+      height: 50px;
+      background-color: transparentize($primary-color, 0.1);}
     
     a {
       display: block;
@@ -160,7 +164,7 @@ nav {
 } // nav
 
 
-// HEADER
+// 3. HEADER
 // --------------------
 header {
   text-align: center;
@@ -191,10 +195,15 @@ header {
       margin-top: 2rem;}}
 } //header
 
-// SECTION#ACCOMODATION
+// 4. SECTION #ACCOMMODATION
 // --------------------
 #accommodation {
-
+  h3 {
+  margin-left: -5px;
+  margin-top: 1.75rem;
+  @include breakpoint(medium) {
+    margin-left: -1px;}}
+  
   h4 {
     &:hover {
       background-color: $light-gray;
@@ -238,31 +247,42 @@ header {
   &.open {
     transition: transform 500ms ease-out;
     transform: scale(1, 1);
-    z-index: 100;
+    z-index: 1000;
     opacity: 1;}
+    
+  .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 3rem;
+    color: $white;
+    line-height: 1;
+    cursor: pointer;
+    &:hover {
+      color: $medium-gray;}}
      
   #fig-container {
-    position: relative;
     margin: 1rem;}
     
   %arrow {
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
     background-color: rgba(0,0,0,0.6);
     font-size: 2rem;
     color: #fff;
     padding: 1rem;
-    transform: translateY(-50%);
+    
     &:hover {
       background-color: rgba(0,0,0,0.9);}}
   
   .arrow-prev {
     @extend %arrow;
-    left: 0;}
+    left: 20px;}
     
   .arrow-next {
     @extend %arrow;
-    right: 0;}
+    right: 20px;}
   
   figure {
     z-index: 101;
@@ -278,21 +298,43 @@ header {
     
 } // lightbox
 
-// MAPS
+// 5. SECTION #MAPS
 // --------------------
 #map {
   height: 350px;
   width: auto;
+  margin-right: 2rem;
+  margin-left: 2rem;
   
   @include breakpoint(medium) {
     height: 400px;}
     
   @include breakpoint(large) {
     height: 450px;}
-    
-} // #map
+}
+.legend {
+  margin: 0.25rem 2rem 0;
+  background-color: $light-gray;
+  padding: 0.5rem;
+  
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  label {
+    width: 48%;
+    display: inline-block;
+    line-height: 1;
+  }
+  input[type="checkbox"] {
+  margin: 0;
+  }
+}
 
-// TESTIMONIALS
+// 6. SECTION #TESTIMONIALS
 // --------------------
 #testimonials {
   blockquote {
@@ -327,8 +369,38 @@ header {
     
 } //#testimonials
 
+// 7. SECTION #ABOUT
+// ------------------
+#about {
+  img {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 150px;
+    width: 200px;
+    display: block;
+    margin: 0 auto 1rem;
+    @include breakpoint(medium) {
+      float: right;
+      width: 300px;
+      margin-left: 15px;
+      margin-bottom: 15px;}}
+  
+  /*.pic-joelle {
+    margin-right: auto;
+    margin-left: auto;
+    width: 150px;
+    @include breakpoint(medium) {
+      width: 180px;}}
+      
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 150px;}*/
+}
 
-// FOOTER
+
+// 8. FOOTER
 // --------------------
 footer {
   background-color: $primary-color;

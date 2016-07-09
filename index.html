@@ -57,8 +57,8 @@
         <div class="center-btn">
           <button class="lightbox-open">Voir les photos</button>
         </div>
-        
         <div id="lightbox">
+          
           <div id="fig-container">
             <figure>
               <img src="img/facade_BIG.jpg" alt="facade du gite">
@@ -67,6 +67,8 @@
             <button class="arrow-prev">&lt;</button>
             <button class="arrow-next">&gt;</button>
           </div>
+          
+          <div class="close-btn">&times;</div>
         </div>
         
         
@@ -156,10 +158,6 @@
           <tr>
             <td>chaque nuit supplémentaire</td>
             <td>+ 25€</td>
-          </tr>
-          <tr>
-            <td>...</td>
-            <td></td>
           </tr>
           <tr>
             <td>7 nuits</td>
@@ -269,6 +267,9 @@
         
         <!-- MODAL --> 
         <div id="modal" class="reveal" data-reveal>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
           <form action="https://formspree.io/tom.mazo.tm@gmail.com" method="post">
             <label>
               Votre nom
@@ -286,6 +287,9 @@
       
       <section id="about">
         <h2>À propos</h2>
+        <div class="pic-joelle">
+          <img src="img/joelle.jpg" alt="A picture of my husband and myself">
+        </div>
         <div class="text-box">
          <p>
            Mes enfants partis, la retraite arrivée, j'ai eu le projet de faire partager ma maison à des hôtes pour qu'ils puissent découvrir la Franche Comté.

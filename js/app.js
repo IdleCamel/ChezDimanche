@@ -1,7 +1,9 @@
 $(document).foundation();
 
 // TABLE OF CONTENTS
-// 1. UTILITY FUNCTION
+// 1. Utility function
+// 2. Responsive nav
+// .....
 
 
 // 1. UTILITY FUNCTION
@@ -256,7 +258,9 @@ function initMap() {
     mapDiv,
     {
       center: chezDimanche.pos,
-      zoom: 12
+      zoom: 12,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      scrollwheel: false
     }
   );
   
