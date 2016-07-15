@@ -3,15 +3,17 @@ $(document).foundation();
 // TABLE OF CONTENTS
 // 1. Utility function
 // 2. Responsive nav
-// .....
+// 3. Accordions
+// 4. Lightbox
+// 5. Google Map
 
 
 // 1. UTILITY FUNCTION
 // ====================
 
 // determines if an event target has a specific parent
-// parent is the parent we are looking for; can be an ID, a class or a HTML element
-// parents is an object comprising all parents; use jQuery's parents function
+// parent can be an ID, a class or a HTML element
+// parents is an object comprising all parents; use jQuery's parents() function
 var hasParent = function (parents, parent) {
   "use strict";
   var key;
@@ -39,7 +41,7 @@ var $clickAnywhere = $('body *');
 $menuToggle.click(function (e) {
   "use strict";
   if (!$navbar.hasClass("open")) {
-    // avoid closing the navbar by clicking on the body (see following function)
+    // stop immediate propagation to avoid triggering other click events
     e.stopImmediatePropagation();
     $navbar.addClass("open");
     $menuToggle.text("close");
@@ -48,9 +50,9 @@ $menuToggle.click(function (e) {
 
 // close the navbar when it's open by clicking anywhere
 // stop immediate propagation AND prevent default in order to:
-  // 1) prevent from firing up multiple events during the bubbling phase
-  // 2) prevent unintendedly behavior 
-  //    (by clicking another button or link when closing the nav)
+  // 1) prevent from firing multiple events unnecessarily during the bubbling phase
+  // 2) prevent any unintended behavior that could be triggered
+  //    by clicking another button or link
 $clickAnywhere.click(function (e) {
   "use strict";
   if ($navbar.hasClass("open")) {
@@ -79,6 +81,7 @@ $('h4').click(function () {
   "use strict";
   $(this).next().slideToggle();
 });
+
 var $info = $('h4').next();
 $info.click(function () {
   "use strict";
@@ -170,11 +173,10 @@ $arrows.click(function () {
   $ligthboxImg.attr('src', imgs[imgCounter].path);
   $ligthboxImg.attr('alt', imgs[imgCounter].caption);
   var imgRank = imgCounter + 1;
-  $lightboxCaption.text(imgRank + "/" + nbImgs + ": " +
-    imgs[imgCounter].caption);
+  $lightboxCaption.text(imgRank + "/" + nbImgs + ": " + imgs[imgCounter].caption);
 });
 
-// close the lightbox when click off image
+// close the lightbox when clicking off image
 $clickAnywhereLightbox.click(function (e) {
   "use strict";
   e.stopPropagation(); // avoid multiple click events
@@ -185,7 +187,6 @@ $clickAnywhereLightbox.click(function (e) {
     $('#lightbox').removeClass("open");
   }
 });
-
 
 
 // 5. GOOGLE MAP
@@ -236,7 +237,7 @@ locations.chapelle = {
 };
 
 locations.ursanne = {
-  foo: "chapelle Le Corbusier",
+  foo: "bourg médiéval de Sainte-Ursanne",
   pos: {
     lat: 47.364455,
     lng: 7.15395
@@ -266,19 +267,19 @@ function initMap() {
   
   // creating a marker
   chezDimanche.marker = new google.maps.Marker({
-    position: locations.chezDimanche.pos,
+    position: chezDimanche.pos,
     map: map,
-    title: locations.chezDimanche.fullName
+    title: chezDimanche.fullName
   });
 
   // creating an info window
   chezDimanche.infoWindow = new google.maps.InfoWindow({
-    content: locations.chezDimanche.info,
+    content: chezDimanche.info,
     maxWidth: 200
   });
   
   // opening the window when loading the page
-  chezDimanche.infoWindow.open(map, locations.chezDimanche.marker);
+  chezDimanche.infoWindow.open(map, chezDimanche.marker);
   
   // opening the window when clicking on marker
   chezDimanche.marker.addListener('click', function () {
@@ -289,8 +290,7 @@ function initMap() {
 
 
 // display a marker and centers the map when checking checkbox in the legend
-var $checkbox = $('.checkbox');
-$checkbox.click(function () {
+$('.checkbox').click(function () {
   "use strict";
   
   // gets clicked element, its id and object

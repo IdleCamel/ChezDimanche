@@ -63,18 +63,13 @@
 // 1. SCAFFOLDING
 // --------------------
 main {
-  padding: {
-    left: 10px;
-    right: 10px;}
-    
   max-width: 750px;
   margin: 0 auto;
   z-index: 0;
-  
+  padding: 0 0.6275rem; // 10px
   @include breakpoint(medium){
-    padding: {
-    left: 15px;
-    right: 15px;}}
+    padding-left: 15px;
+    padding-right: 15px;}
 } //main
   
 section {
@@ -145,12 +140,12 @@ nav {
     display: none;
     
     &.open {
-    display: block;
+      display: block;
       height: 270px;
       -webkit-transition: height 500ms ease-out;
       transition: height 500ms ease-out;}
     
-    @include breakpoint(medium) {
+    @include breakpoint(medium) { // displays horizontal bar on medium-sized and large screens
       @include flex;
       @include flex-align(spaced, middle);
       height: 50px;
@@ -159,7 +154,6 @@ nav {
     a {
       display: block;
       padding: 15px;}
-        
   } // ul
 } // nav
 
@@ -182,7 +176,7 @@ header {
     position: center;
     size: cover;}
     
-    // adapting header bg-img to device size
+    // adapting header background-img to device size
     @media screen and #{breakpoint(portrait)} {
       background-image: -webkit-linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -253,9 +247,9 @@ header {
   margin-left: -5px;
   margin-top: 1.75rem;
   @include breakpoint(medium) {
-    margin-left: -1px;}}
+    margin-left: -10px;}}
   
-  h4 {
+  h4 { // accordion
     &:hover {
       background-color: $light-gray;
       cursor: pointer;}
@@ -271,16 +265,12 @@ header {
       border-right: 7px solid transparent;
       border-top: 7px solid $primary-color;}} // h4
   
-  .description-toggle {
+  .description-toggle { // toggle display with js
     display: none;}
     
   img {
-    cursor: pointer;
-  }
-    
+    cursor: pointer;}
 } // #accommodation
-
-
 
 #lightbox {
   @include flex;
@@ -296,7 +286,7 @@ header {
   background-color: rgba(0,0,0,0.8);
   
   &.open {
-    transition: transform 500ms ease-out;
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
     transform: scale(1, 1);
     z-index: 1000;
     opacity: 1;}
@@ -318,12 +308,11 @@ header {
   %arrow {
     position: absolute;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translateY(-50%); // centers vertically
     background-color: rgba(0,0,0,0.6);
     font-size: 2rem;
     color: #fff;
     padding: 1rem;
-    
     &:hover {
       background-color: rgba(0,0,0,0.9);}}
   
@@ -337,7 +326,7 @@ header {
   
   figure {
     z-index: 101;
-    margin:0}
+    margin:0;}
     
   img {
     max-height: 90vh;
@@ -353,7 +342,6 @@ header {
 // --------------------
 #map {
   height: 350px;
-  width: auto;
   margin-right: 2rem;
   margin-left: 2rem;
   
@@ -362,7 +350,8 @@ header {
     
   @include breakpoint(large) {
     height: 450px;}
-}
+} // #map
+
 .legend {
   margin: 0.25rem 2rem 0;
   background-color: $light-gray;
@@ -372,18 +361,16 @@ header {
     text-align: center;
     font-weight: bold;
     font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-  }
+    margin-bottom: 0.5rem;}
   
   label {
     width: 48%;
     display: inline-block;
-    line-height: 1;
-  }
+    line-height: 1;}
+    
   input[type="checkbox"] {
-  margin: 0;
-  }
-}
+  margin: 0;}
+} // .legend
 
 // 6. SECTION #TESTIMONIALS
 // --------------------
@@ -399,15 +386,13 @@ header {
       text-indent: 3rem;
       font-style: italic;
       margin-bottom: 0.5rem;
-      
       &:before {
         content: "\201C";
         color: $primary-color;
         position: absolute;
         left: -3rem;
         top: -1.5rem;
-        font-size: 4em;}}
-        
+        font-size: 4em;}}   
   } //blockquote
   
   cite {
@@ -425,8 +410,6 @@ header {
 #about {
   img {
     text-align: center;
-    margin-left: 10px;
-    margin-right: 10px;
     border-radius: 150px;
     width: 200px;
     display: block;
@@ -437,17 +420,6 @@ header {
       margin-left: 15px;
       margin-bottom: 15px;}}
   
-  /*.pic-joelle {
-    margin-right: auto;
-    margin-left: auto;
-    width: 150px;
-    @include breakpoint(medium) {
-      width: 180px;}}
-      
-  img {
-    width: 100%;
-    height: auto;
-    border-radius: 150px;}*/
 }
 
 
@@ -459,11 +431,11 @@ footer {
   text-align: center;
   font-weight: 500;
   
-  ul {
+  ul { // override default (list bullets + left margin)
     list-style: none;
     margin-left: 0;}
     
-  address {
+  address { // override default (italic)
     font-style: normal;}
     
   .social-media-icons > li {
