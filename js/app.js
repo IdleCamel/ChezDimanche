@@ -5,7 +5,8 @@ $(document).foundation();
 // 2. Responsive nav
 // 3. Accordions
 // 4. Lightbox
-// 5. Google Map
+// 5. jQuery UI Datepicker
+// 6. Google Map
 
 
 // 1. UTILITY FUNCTION
@@ -188,8 +189,41 @@ $clickAnywhereLightbox.click(function (e) {
   }
 });
 
+// 5. JQUERY UI DATEPICKER
+// =======================
+var bookedDates = [];
 
-// 5. GOOGLE MAP
+// reservations 01/07/2016 -> 30/07/2016 included
+var i;
+for (i = 1; i < 31; i += 1) {
+  var bookedDate = new Date(2016, 6, i).getTime();
+  bookedDates.push(bookedDate);
+}
+
+// reservations 01/08/2016 -> 27/08/2016 included
+for (i = 1; i < 28; i += 1) {
+  var bookedDate = new Date(2016, 7, i).getTime();
+  bookedDates.push(bookedDate);
+}
+
+// reservations 19/09/2016 -> 29/09/2016 included
+for (i = 19; i < 30; i += 1) {
+  var bookedDate = new Date(2016, 8, i).getTime();
+  bookedDates.push(bookedDate);
+}
+
+$('#jquery-datepicker').datepicker({
+  numberOfMonths: 2,
+  beforeShowDay: function (date) {
+    if ($.inArray(date.getTime(), bookedDates) > -1) {
+      return [false, "not-available", ""];
+    } else {
+      return [true, "", "disponible"];
+    }
+  }
+});
+
+// 6. GOOGLE MAP
 // ===============
 var map;
 var mapDiv = document.getElementById('map');
@@ -221,7 +255,7 @@ locations.citadelle = {
 };
   
 locations.ballon = {
-  foo: "Ballon d'Alsace",
+  fullName: "Ballon d'Alsace",
   pos: {
     lat: 47.82055,
     lng: 6.83450
@@ -229,7 +263,7 @@ locations.ballon = {
 };
 
 locations.chapelle = {
-  foo: "chapelle Le Corbusier",
+  fullName: "chapelle Le Corbusier",
   pos: {
     lat: 47.704181,
     lng: 6.621807399999966
@@ -245,7 +279,7 @@ locations.ursanne = {
 };
 
 locations.malsaucy = {
-  foo: "Lac du Malsaucy",
+  fullName: "Lac du Malsaucy",
   pos: {
     lat: 47.685642,
     lng: 6.8053

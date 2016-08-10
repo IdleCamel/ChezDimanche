@@ -54,10 +54,11 @@
 // 2. Navbar
 // 3. Header
 // 4. Section #accommodation
-// 5. Section #maps
-// 6. Section #testimonials
-// 7. Section #about
-// 8. Footer
+// 5. Section #pricing
+// 6. Section #maps
+// 7. Section #testimonials
+// 8. Section #about
+// 9. Footer
 
 
 // 1. SCAFFOLDING
@@ -338,7 +339,24 @@ header {
     
 } // lightbox
 
-// 5. SECTION #MAPS
+// 5. SECTION #PRICING
+// --------------------
+
+// keeping default Foundation styles for pricing table
+
+// styling jQuery DatePicker
+
+//.ui-datepicker-calendar > tbody > tr > .not-available > span {
+  //background-color: rgba(255, 0, 0, 0.3);
+//}
+
+#jquery-datepicker {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+// 6. SECTION #MAPS
 // --------------------
 #map {
   height: 350px;
@@ -372,7 +390,7 @@ header {
   margin: 0;}
 } // .legend
 
-// 6. SECTION #TESTIMONIALS
+// 7. SECTION #TESTIMONIALS
 // --------------------
 #testimonials {
   blockquote {
@@ -405,7 +423,7 @@ header {
     
 } //#testimonials
 
-// 7. SECTION #ABOUT
+// 8. SECTION #ABOUT
 // ------------------
 #about {
   img {
@@ -423,7 +441,7 @@ header {
 }
 
 
-// 8. FOOTER
+// 9. FOOTER
 // --------------------
 footer {
   background-color: $primary-color;

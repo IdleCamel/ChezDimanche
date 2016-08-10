@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gite et Couvert chez Dimanche</title>
     <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/app.css">
   </head>
   <body>
@@ -21,6 +22,7 @@
           <li><a href="#google-map">Plan</a></li>
           <li><a href="#testimonials">Commentaires</a></li>
           <li><a href="#about">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>      
       
@@ -43,6 +45,8 @@
           <li><strong>Superficie</strong>: 55m<sup>2</sup>, 1 chambre, 1 grand salon</li>
           <li><strong>Lits</strong>: un lit double (140*190cm), 2 fauteuils convertibles (80*200cm)</li>
           <li><strong>Nous parlons</strong> : FR - DE - EN</li>
+          <li><strong>Fumeurs</strong> : Interdiction de fumer dans le gite</li>
+          <li><strong>Fêtes, animaux</strong> : merci de contacter le propriétaire</li>
           <li><strong>Arrivées</strong>: à partir de 14h</li>
           <li><strong>Départs</strong>: jusque 10h</li>
         </ul>
@@ -51,7 +55,7 @@
         <!-- Galerie photos -->
         <h3>Galerie photos</h3>
         <div class="img-container">
-          <img class="lightbox-open" src="img/facade_BIG.jpg" alt="facade du gite">
+          <img class="lightbox-open" src="img/jardin1_HEADER.jpg" alt="Jardin privatif">
         </div>
         
         <div class="center-btn">
@@ -101,6 +105,7 @@
           <p><strong>Équipement bébé</strong> (lit, chaise, baignoire) à disposition.</p>
           <p>Côté rue, <strong>place de parking privative</strong> juste devant le gite. </p>
           <p>Possibilité de ranger les vélos dans le <strong>garage à vélo</strong>.</p>
+          <p>Table de ping-pong côté rue.</p>
           <p>J'habite à côté et suis prête à aider dans la mesure de mes capacités.</p>
         </div>
         
@@ -156,18 +161,11 @@
             <td>180€</td>
           </tr>
           <tr>
-            <td>chaque nuit supplémentaire</td>
-            <td>+ 25€</td>
-          </tr>
-          <tr>
             <td>7 nuits</td>
             <td>280€</td>
           </tr>
-          <tr>
-            <td>14 nuits</td>
-            <td>430€</td>
-          </tr>
         </table>
+        <div id="jquery-datepicker"></div>
       </section>
       
       <section id="google-map">
@@ -302,10 +300,10 @@
            A l'horizon, au sud, les hauts plateaux du Jura, pâtures à Montbéliardes et Comté, prés de fauche fleuris. Puis toujours les falaises de calcaire blanches bleutées et en bas l'eau verte du Doubs.
          </p>
          <p>
-           Notre maison est à l'interface de 2 mondes : LA VILLE, LA CAMPAGNE.
+           Notre gîte s'appelle ainsi car Dimanche est le nom des derniers locataires qui ont habité la fermette. Nous avons retrouvé leur ancienne plaque de sonnette.
          </p>
          <p>
-           Chacun de nos hôtes peut y trouver son compte.
+           Notre maison est à l'interface de 2 mondes : LA VILLE, LA CAMPAGNE. Chacun de nos hôtes peut y trouver son compte.
          </p>
         </div>
         <div class="img-container">
@@ -314,7 +312,7 @@
       </section>
     </main>
     
-    <footer>
+    <footer id="contact">
       <address>
         <ul>
           <li>Gite et Couvert chez Dimanche</li>
@@ -323,7 +321,8 @@
           <li>FRANCE</li>
         </ul>
         <ul>
-          <li>+33 (0) 6 30 02 76 78</li>
+          <li>+33 6 74 44 63 00</li>
+          <li>+33 9 51 09 35 16</li>
           <li>
             <a href="mailto:joellemoner@yahoo.fr">joellemoner@yahoo.fr</a>
           </li>
@@ -344,6 +343,7 @@
     
     
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="bower_components/what-input/what-input.js"></script>
     <script src="bower_components/foundation-sites/dist/foundation.js"></script>
     <script src="js/app.js"></script>
