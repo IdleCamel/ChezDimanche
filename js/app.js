@@ -107,7 +107,7 @@ var imgs = [
     caption: "Salon - coin lecture"
   },
   {
-    path: "img/chambre1_BIG.jpg",
+    path: "img/chambre1_BIG.JPG",
     caption: "Chambre avec lit double"
   },
   {
