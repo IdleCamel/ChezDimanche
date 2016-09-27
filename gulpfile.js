@@ -21,8 +21,9 @@ gulp.task('sass', function() {
 
 
 gulp.task('deploy', function() {
-  return gulp.src('dist/**/*')
-    .pipe($.ghPages())
+  console.log('deploy task running');
+  return gulp.src('./dist/**/*')
+    .pipe($.ghPages());
 });
 
 gulp.task('default', ['sass'], function() {
