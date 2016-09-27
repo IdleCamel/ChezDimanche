@@ -20,6 +20,11 @@ gulp.task('sass', function() {
 });
 
 
+gulp.task('deploy', function() {
+  return gulp.src('dist/**/*')
+    .pipe($.ghPages())
+});
+
 gulp.task('default', ['sass'], function() {
   gulp.watch(['scss/**/*.scss'], ['sass']);
 });
