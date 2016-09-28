@@ -38,7 +38,8 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('markup', function() {
-  return gulp.src('index.html')
+  return gulp.src('src/index.html')
+    .pipe($.useref())
     .pipe(gulp.dest('dist/'));
 });
 
