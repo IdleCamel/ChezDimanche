@@ -1,0 +1,475 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"font",
+				"font-style"
+			],
+			[
+				"border",
+				"border-right"
+			],
+			[
+				"bo",
+				"border"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"if",
+				"if	Twig : If"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 16988,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "dist/index.html",
+			"settings":
+			{
+				"buffer_size": 16988,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 127.0,
+		"last_filter": "wrap",
+		"selected_items":
+		[
+			[
+				"wrap",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"rem",
+				"Emmet: Remove Tag"
+			],
+			[
+				"wra",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"wr",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"remo",
+				"Emmet: Remove Tag"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: List Packages"
+			],
+			[
+				"sstw",
+				"Set Syntax: HTML (Twig)"
+			]
+		],
+		"width": 534.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/d438064/Sinon/chez-dimanche",
+		"/Users/d438064/Sinon/chez-dimanche/dist"
+	],
+	"file_history":
+	[
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/css/praxistipps.css",
+		"/Users/d438064/Projects/praxistipps/app/config/parameters.yml",
+		"/Users/d438064/Projects/praxistipps/app/config/parameters.yml.dist",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/movetostyleguide/slickCustomTheme.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/praxistipps.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/component/chip-web-components/scss/global/components/title/_title.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/articleList.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/default/index.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/Category/category_articles_list.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/component/chip-web-components/scss/global/components/title/_title.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/Tag/tag_articles_list.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/breadcrumb.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/title.html.twig",
+		"/Users/d438064/Projects/praxistipps/web/fea/0.0.1/icon_manifest.json",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/components/_pageHeader.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/quicknavigation.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/teaserDefault.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/Author/author_articles_list.html.twig",
+		"/Users/d438064/Projects/praxistipps/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/DependencyInjection/TwigExtension.php",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Helper/PraxistippsTwigExtension.php",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/popularFeed.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/components/_popularFeed.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/movetostyleguide/_smalltext.scss",
+		"/Users/d438064/Projects/praxistipps/web/fea-dev/scss/components/_articleList.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/scss/praxistipps.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/components/_articleList.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/tags.html.twig",
+		"/Users/d438064/Projects/praxistipps/README.md",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/searchbox.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/component/chip-web-components/scss/global/layout/flexbox/helper/_flex-justify-content.scss",
+		"/Users/d438064/Projects/praxistipps/app/logs/dev.log",
+		"/Users/d438064/Projects/praxistipps/.gitignore",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/component/chip-web-components/scss/global/layout/flexbox/helper/_flex-justify-content-responsive.scss",
+		"/Users/d438064/Projects/praxistipps/app/logs/prod.log",
+		"/Users/d438064/Projects/praxistipps/app/cache/dev/classes.php.meta",
+		"/Users/d438064/Projects/praxistipps/app/config/config.yml",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Controller/TagController.php",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Controller/AuthorController.php",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Controller/CategoryController.php",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/Tag/tag_list.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/components/_searchbox.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/PraxistippsBundle/Resources/views/Article/article.html.twig",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/component/chip-web-components/scss/global/helper/_display.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/components/_teaserSmallList.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/component/chip-web-components/scss/global/components/button/_button.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/component/chip-web-components/scss/global/mixins/_media-queries.scss",
+		"/Users/d438064/Projects/praxistipps/src/Chip/Bundle/FeaBundle/Resources/fea/build/scss/components/_searchbox.scss",
+		"/Users/d438064/Projects/praxistipps/vendor/sensio/generator-bundle/Resources/skeleton/bundle/Bundle.php.twig",
+		"/Users/d438064/Projects/vagrant-dev/Vagrant.yaml",
+		"/Users/d438064/.ssh/id_rsa.pub"
+	],
+	"find":
+	{
+		"height": 25.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"Lorem",
+			"md",
+			"m",
+			".Title__Icon",
+			"Icon__Item",
+			"Icon",
+			"cache",
+			"child",
+			"32",
+			"test",
+			"slick",
+			"lg",
+			"md",
+			"sm"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16723,
+								16723
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 6002.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "dist/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 16988,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "untitled.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"popula",
+				"src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/components/_popularFeed.scss"
+			],
+			[
+				"articlel",
+				"src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/articleList.html.twig"
+			],
+			[
+				"titl",
+				"web/fea-dev/component/chip-web-components/scss/global/components/title/_title.scss"
+			],
+			[
+				"parameters",
+				"app/config/parameters.yml.dist"
+			],
+			[
+				"param",
+				"app/config/parameters.yml"
+			],
+			[
+				"quicknav",
+				"src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/quicknavigation.html.twig"
+			],
+			[
+				"slickc",
+				"src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/movetostyleguide/slickCustomTheme.scss"
+			],
+			[
+				"popul",
+				"src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/components/_popularFeed.scss"
+			],
+			[
+				"praxistipplstw",
+				"src/Chip/Bundle/PraxistippsBundle/Helper/PraxistippsTwigExtension.php"
+			],
+			[
+				"twigex",
+				"vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/DependencyInjection/TwigExtension.php"
+			],
+			[
+				"_small",
+				"src/Chip/Bundle/FeaBundle/Resources/fea/src/scss/movetostyleguide/_smalltext.scss"
+			],
+			[
+				"title",
+				"src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/title.html.twig"
+			],
+			[
+				"para",
+				"app/config/parameters.yml"
+			],
+			[
+				"praxist",
+				"src/Chip/Bundle/FeaBundle/Resources/fea/build/scss/praxistipps.scss"
+			],
+			[
+				"title.scss",
+				"src/Chip/Bundle/FeaBundle/Resources/fea/build/component/chip-web-components/scss/global/components/title/_title.scss"
+			],
+			[
+				"title.",
+				"src/Chip/Bundle/PraxistippsBundle/Resources/views/partials/title.html.twig"
+			],
+			[
+				"",
+				"app/config/parameters.yml"
+			],
+			[
+				"manifes",
+				"web/fea/0.0.1/icon_manifest.json"
+			],
+			[
+				"parameter",
+				"app/config/parameters.yml.dist"
+			],
+			[
+				"paramete",
+				"app/config/parameters.yml"
+			],
+			[
+				"con",
+				"app/config/config.yml"
+			],
+			[
+				"giti",
+				".gitignore"
+			],
+			[
+				"gitig",
+				".gitignore"
+			],
+			[
+				"paramet",
+				"app/config/parameters.yml.dist"
+			],
+			[
+				"paramter",
+				"app/config/parameters.yml.dist"
+			],
+			[
+				".twig",
+				"vendor/sensio/generator-bundle/Resources/skeleton/bundle/Bundle.php.twig"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 312.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
