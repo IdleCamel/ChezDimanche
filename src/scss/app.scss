@@ -1,8 +1,8 @@
 @charset 'utf-8';
 
 @import 'settings';
-@import 'foundation';
-@import 'motion-ui';
+@import '../bower_components/foundation-sites/scss/foundation';
+//@import 'motion-ui';
 
 @include foundation-global-styles;
 // @include foundation-grid;
@@ -46,8 +46,8 @@
 // @include foundation-float-classes;
 @include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 // TABLE OF CONTENTS
 // 1. Scaffolding
