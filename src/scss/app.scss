@@ -3,8 +3,8 @@
 
 // ZURB FOUNDATION
 @import 'settings';
-@import 'foundation';
-@import 'motion-ui';
+@import '../bower_components/foundation-sites/scss/foundation';
+//@import 'motion-ui';
 
 // CUSTOM STYLES
 @import 'my_settings';
@@ -64,8 +64,8 @@
 // @include foundation-float-classes;
 @include foundation-flex-classes;
 
-@include motion-ui-transitions;
-@include motion-ui-animations;
+//@include motion-ui-transitions;
+//@include motion-ui-animations;
 
 // TABLE OF CONTENTS
 // 1. Scaffolding

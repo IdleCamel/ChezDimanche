@@ -191,26 +191,7 @@ $clickAnywhereLightbox.click(function (e) {
 
 // 5. JQUERY UI DATEPICKER
 // =======================
-var bookedDates = [];
 
-// reservations 01/07/2016 -> 30/07/2016 included
-var i;
-for (i = 1; i < 31; i += 1) {
-  var bookedDate = new Date(2016, 6, i).getTime();
-  bookedDates.push(bookedDate);
-}
-
-// reservations 01/08/2016 -> 27/08/2016 included
-for (i = 1; i < 28; i += 1) {
-  var bookedDate = new Date(2016, 7, i).getTime();
-  bookedDates.push(bookedDate);
-}
-
-// reservations 19/09/2016 -> 29/09/2016 included
-for (i = 19; i < 30; i += 1) {
-  var bookedDate = new Date(2016, 8, i).getTime();
-  bookedDates.push(bookedDate);
-}
 
 $('#jquery-datepicker').datepicker({
   numberOfMonths: 2,
