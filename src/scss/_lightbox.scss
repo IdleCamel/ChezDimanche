@@ -1,0 +1,65 @@
+#lightbox {
+  @include flex;
+  @include flex-align(center, middle);
+  z-index: -100;
+  opacity: 0;
+  position: fixed;
+  transform: scale(0.5, 0.5);
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.8);
+  
+  &.open {
+    transition: transform 500ms ease-out, opacity 500ms ease-out;
+    transform: scale(1, 1);
+    z-index: 1000;
+    opacity: 1;}
+    
+  .close-btn {
+    position: absolute;
+    top: 0px;
+    right: 25px;
+    font-size: 3rem;
+    color: $white;
+    line-height: 1;
+    cursor: pointer;
+    &:hover {
+      color: $medium-gray;}}
+     
+  #fig-container {
+    margin: 1rem;}
+    
+  %arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); // centers vertically
+    background-color: rgba(0,0,0,0.6);
+    font-size: 2rem;
+    color: #fff;
+    padding: 1rem;
+    &:hover {
+      background-color: rgba(0,0,0,0.9);}}
+  
+  .arrow-prev {
+    @extend %arrow;
+    left: 20px;}
+    
+  .arrow-next {
+    @extend %arrow;
+    right: 20px;}
+  
+  figure {
+    z-index: 101;
+    margin:0;}
+    
+  img {
+    max-height: 90vh;
+    max-width: 90vw;}
+    
+  figcaption {
+    padding: 5px;
+    color: $white;}
+    
+} // lightbox

@@ -1,0 +1,17 @@
+footer {
+  background-color: $primary-color;
+  color: $white;
+  text-align: center;
+  font-weight: 500;
+  
+  ul { // override default (list bullets + left margin)
+    list-style: none;
+    margin-left: 0;}
+    
+  address { // override default (italic)
+    font-style: normal;}
+    
+  .social-media-icons > li {
+    display: inline-block;
+    margin: 0 10px;}
+} // footer

@@ -1,0 +1,31 @@
+#map {
+  height: 350px;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  
+  @include breakpoint(medium) {
+    height: 400px;}
+    
+  @include breakpoint(large) {
+    height: 450px;}
+} // #map
+
+.legend {
+  margin: 0.25rem 2rem 0;
+  background-color: $light-gray;
+  padding: 0.5rem;
+  
+  p {
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;}
+  
+  label {
+    width: 48%;
+    display: inline-block;
+    line-height: 1;}
+    
+  input[type="checkbox"] {
+  margin: 0;}
+} // .legend

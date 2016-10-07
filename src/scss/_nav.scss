@@ -1,0 +1,53 @@
+nav {
+  #menu-toggle {
+    @include flex;
+    @include flex-align(center, middle);
+    @include position(fixed, 20px, 20px);
+    // position: fixed;
+    // top: 20px;
+    // left: 20px;
+    width: 50px;
+    height: 50px;
+    font-size: 80%;
+    border-radius: 90px;
+    z-index: 101;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    text-transform: uppercase;
+
+    @include breakpoint(medium) {
+      display: none;}} // #menu-toggle
+  
+  ul {
+    background-color: rgba(0,0,0,0.7);
+    color: $white;
+    text-align: center;
+    text-transform: uppercase;
+    @include position(fixed, $top: 0, $left: 0, $right: 0);
+    // position: fixed;
+    // top: 0;
+    // left: 0;
+    // right: 0;
+    height: 0;
+    margin: 0;
+    z-index: 100;
+    list-style: none;
+    display: none;
+    
+    &.open {
+      display: block;
+      height: 270px;
+      -webkit-transition: height 500ms ease-out;
+      transition: height 500ms ease-out;}
+    
+    @include breakpoint(medium) { // displays horizontal bar on medium-sized and large screens
+      @include flex;
+      @include flex-align(spaced, middle);
+      height: 50px;
+      background-color: transparentize($primary-color, 0.1);}
+    
+    a {
+      display: block;
+      padding: 15px;}
+  } // ul
+} // nav

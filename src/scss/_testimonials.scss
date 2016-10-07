@@ -1,0 +1,30 @@
+#testimonials {
+  blockquote {
+    border: none;
+    margin: 1rem 0;
+    &:hover {
+      background-color: $light-gray;}
+    
+    p {
+      position: relative;
+      text-indent: 3rem;
+      font-style: italic;
+      margin-bottom: 0.5rem;
+      &:before {
+        content: "\201C";
+        color: $primary-color;
+        position: absolute;
+        left: -3rem;
+        top: -1.5rem;
+        font-size: 4em;}}   
+  } //blockquote
+  
+  cite {
+    font-style: normal;
+    font-weight: bold;
+    color: $primary-color;}
+    
+  #olderTesti {
+    display: none;}
+    
+} //#testimonials
