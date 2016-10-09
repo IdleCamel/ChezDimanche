@@ -218,8 +218,9 @@ locations.chezDimanche = {
   },
   info: "Gite et Couvert chez Dimanche <br>"
     + "38 rue de Lattre de Tassigny <br>"
-    + "90 850 Essert</p>"
-    + "<p>+33 (0) 6 30 02 76 78<br>"
+    + "90 850 Essert<br><br>"
+    + "+33 6 74 44 63 00<br>"
+    + "+33 9 51 09 35 16<br>"
     + "joellemoner@yahoo.fr"
 };
 

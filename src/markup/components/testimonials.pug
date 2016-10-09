@@ -1,0 +1,58 @@
+section#testimonials
+
+	h2 Vos commentaires
+
+	blockquote(cite="https://www.facebook.com/ChezDimanche/reviews/")
+		a(href="https://www.facebook.com/ChezDimanche/reviews", target="_blank")
+			p Gîte calme, confortable, agréable et tout équipé. Parfait pour un déplacement professionnel et à moins d'une heure des vosges, du Jura et de l'Alsace pour se promener. A 5 min du centre ville de Belfort. Les propriétaires sont très accueillants et sympathiques!! Ne pas hésiter!!
+			cite Edouard Gdn
+			time(datetime="2016-04") Avril 2016
+
+	blockquote(cite="https://www.facebook.com/ChezDimanche/reviews/")
+		a(href="https://www.facebook.com/ChezDimanche/reviews", target="_blank")
+			p J´adore!. Definitivamente recomendable! La casa es una maravilla de lugar, un pequeño tesoro en medio de la naturaleza, la vista es preciosa y el lugar es bastante calmado y a la vez cercano para realizar actividades. Amé cada uno de los detalles de la casa, desde libros, juegos de mesa y la deco vintage (quería fotografiar todo). Las fotos no dan suficiente crédito a lo confortable y hermoso que es el lugar. Joel y Loic son muy amables. Volvería con gusto!
+			cite Guila Saltos Bukaeva
+			time(datetime="2016-04") Avril 2016
+
+	blockquote(cite="https://www.airbnb.de/rooms/12201373")
+		a(href="https://www.airbnb.de/rooms/12201373", target="_blank")
+			p Appartement tout neuf et très complet, fidèle à la description. Idéal pour un couple. Joëlle a été très attentive à notre confort et à celui de notre bébé. Elle nous a conseillé sur les bons plans dans la région et prêté toute une série de cartes et de guides. Petit plus : on profite du magnifique jardin composés d’une multitude de plantes basses des propriétaires!
+			cite Bernard, 
+			time(datetime="2016-04") Avril 2016
+
+	#olderTesti
+		blockquote(cite="https://www.airbnb.de/rooms/12201373")
+			a(href="https://www.airbnb.de/rooms/12201373", target="_blank")
+				p Joelle was a wonderful host who took great care to make us feel very welcome. She made sure we knew how to get to the places we wanted to go and recommended areas to see. Our little home was super cosy and fantastic to stay in. We had a fabulous time!
+				cite Evelyn, 
+				time(datetime="2016-05") Mai 2016
+
+		blockquote(cite="https://www.airbnb.de/rooms/12201373")
+			a(href="https://www.airbnb.de/rooms/12201373", target="_blank")
+				p Joëlle was a wonderful host! We arrived quite late in the evening but she stayed up to help us into the flat and showed us around. She even baked us a cake to have for breakfast the next morning. It was a beautiful home and the beds were so comfortable. I would definitely recommend staying here if you're passing through the area. We didn't tour the are, this town was just a mid-point on our road trip and so we stopped here for a bed for the night.
+				cite Kristine, 
+				time(datetime="2016-05") Mai 2016
+
+		blockquote(cite="https://www.airbnb.de/rooms/12201373")
+			a(href="https://www.airbnb.de/rooms/12201373", target="_blank")
+				p Juste parfait !
+				cite Bénédicte, 
+				time(datetime="2016-05") Mai 2016
+
+	.center-btn
+		button#testimonialsBtn(type="button") Voir les commentaires plus anciens
+	.center-btn
+		button#testimonialsBtn(type="button", data-open="modal") Laisser un commentaire
+
+	#modal.reveal(data-reveal)
+		button.close-button(data-close, aria-label="close modal", type="button")
+			span(aria-hidden="true") &times;
+		form(action="https://formspree.io/tom.mazo.tm@gmail.com", method="post")
+			label Votre nom
+				input(type="text", name="testimonials")
+			label Votre commentaire
+				textarea(name="testimonial", rows="4")
+			button(type="submit") Envoyer
+
+
+	

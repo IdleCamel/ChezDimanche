@@ -45,7 +45,11 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('markup', function() {
-  return gulp.src('src/index.html')
+  return gulp.src('src/markup/index.pug')
+    .pipe($.pugLint())
+    .pipe($.pug({
+      pretty: true
+    }))
     .pipe($.useref())
     .pipe(gulp.dest('dist/'))
     .pipe(browserSync.reload({
@@ -76,8 +80,8 @@ gulp.task('build', [
 
 gulp.task('watch', ['build'], function() {
   gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/scripts/**/*.js', ['scripts']);
-  gulp.watch('src/markup/index.jade', ['markup']);
+  gulp.watch('src/js/**/*.js', ['scripts', 'markup']);
+  gulp.watch('src/markup/**/*.pug', ['markup']);
 });
 
 gulp.task('browser-sync', function() {
@@ -88,11 +92,7 @@ gulp.task('browser-sync', function() {
   });
 });
 
-gulp.task('serve', ['browser-sync', 'build'], function() {
-  gulp.watch('src/scss/**/*.scss', ['sass']);
-  gulp.watch('src/scripts/**/*.js', ['scripts']);
-  gulp.watch('src/index.html', ['markup']);
-});
+gulp.task('serve', ['browser-sync', 'build', 'watch']);
 
 gulp.task('default', ['sass'], function() {
   gulp.watch(['src/scss/**/*.scss'], ['sass']);
