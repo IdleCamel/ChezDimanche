@@ -1,5 +1,6 @@
-var gulp = require('gulp');
-var $    = require('gulp-load-plugins')();
+var     gulp        = require('gulp'),
+        $           = require('gulp-load-plugins')(),
+        browserSync = require('browser-sync').create();
 
 var sassPaths = [
   'bower_components/foundation-sites/scss',
@@ -16,7 +17,10 @@ gulp.task('sass', function() {
     .pipe($.autoprefixer({
       browsers: ['last 2 versions', 'ie >= 9']
     }))
-    .pipe(gulp.dest('dist/css/'));
+    .pipe(gulp.dest('dist/css/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 
@@ -30,6 +34,9 @@ gulp.task('scripts', function() {
   return gulp.src('src/js/**/*.js')
     //.pipe($.concat('app.js'))
     .pipe(gulp.dest('dist/js/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
     //.pipe($.uglify());
   // src
   // concatenate
@@ -40,7 +47,10 @@ gulp.task('scripts', function() {
 gulp.task('markup', function() {
   return gulp.src('src/index.html')
     .pipe($.useref())
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('dist/'))
+    .pipe(browserSync.reload({
+      stream: true
+    }));
 });
 
 gulp.task('images', function() {
@@ -64,12 +74,24 @@ gulp.task('build', [
   'images'
 ]);
 
-gulp.task('watch', function() {
-  // TO DO
+gulp.task('watch', ['build'], function() {
+  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/scripts/**/*.js', ['scripts']);
+  gulp.watch('src/markup/index.jade', ['markup']);
 });
 
-gulp.task('serve', function() {
-  // TO DO
+gulp.task('browser-sync', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'dist'
+    }
+  });
+});
+
+gulp.task('serve', ['browser-sync', 'build'], function() {
+  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/scripts/**/*.js', ['scripts']);
+  gulp.watch('src/index.html', ['markup']);
 });
 
 gulp.task('default', ['sass'], function() {

@@ -81,11 +81,16 @@
 
 // 1. SCAFFOLDING
 // --------------------
+body {
+  background-color: #ddd;
+}
+
 main {
   max-width: 750px;
   margin: 0 auto;
   z-index: 0;
   padding: 0 0.6275rem; // 10px
+  background-color: #fff;
   @include breakpoint(medium){
     padding-left: 15px;
     padding-right: 15px;}
