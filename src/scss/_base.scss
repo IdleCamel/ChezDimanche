@@ -1,0 +1,65 @@
+// 1. SCAFFOLDING
+// --------------------
+body {
+  background-color: #ddd;
+}
+
+main {
+  max-width: 750px;
+  margin: 0 auto;
+  z-index: 0;
+  padding: 0 0.6275rem; // 10px
+  background-color: #fff;
+  @include breakpoint(medium){
+    padding-left: 15px;
+    padding-right: 15px;}
+} //main
+  
+section {
+  padding: 30px 0;}
+
+footer {
+  padding: 10px 0;}
+    
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;}
+
+h4, h5, h6 {
+  font-family: $body-font-family;}
+  
+button:not(.close-button) {
+  @include button-base;
+  @include button-style($primary-color, darken($primary-color, 10%), $white);
+  margin-top: 1rem}
+
+.center-btn {
+  @include flex;
+  @include flex-align(center, middle);}
+
+strong {
+  color: $primary-color;}
+
+p, li, a {
+  font-size: 0.9275rem; //15px
+  
+  @include breakpoint(medium) {
+    font-size: 1rem;}} 
+
+
+// 5. SECTION #PRICING
+// --------------------
+
+// keeping default Foundation styles for pricing table
+
+// styling jQuery DatePicker
+
+//.ui-datepicker-calendar > tbody > tr > .not-available > span {
+  //background-color: rgba(255, 0, 0, 0.3);
+//}
+
+#jquery-datepicker {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}

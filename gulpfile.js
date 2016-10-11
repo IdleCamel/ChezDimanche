@@ -58,7 +58,8 @@ gulp.task('markup', function() {
 });
 
 gulp.task('images', function() {
-  return gulp.src('src/img/*.*')
+  return gulp.src('src/img/*.+(png|jpg|svg)')
+    .pipe($.cache($.imagemin()))
     .pipe(gulp.dest('dist/img'));
 });
 

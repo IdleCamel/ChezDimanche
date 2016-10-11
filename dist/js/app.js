@@ -95,48 +95,64 @@ $info.click(function () {
 
 var imgs = [
   {
-    path: "img/facade_BIG.jpg",
+    path: "img/street.jpg",
     caption: "Le gite est situé dans une ancienne ferme comtoise (vue depuis la rue) - parking privatif"
   },
   {
-    path: "img/salon2_BIG.jpg",
-    caption: "Salon/salle à manger - coin TV / WiFi / multimedia"
+    path: "img/living-room2.jpg",
+    caption: "Salon - coin repas"
   },
   {
-    path: "img/salon1_BIG.jpg",
+    path: "img/img/living-room1.jpg",
     caption: "Salon - coin lecture"
   },
   {
-    path: "img/chambre1_BIG.JPG",
+    path: "img/bedroom1.jpg",
     caption: "Chambre avec lit double"
   },
   {
-    path: "img/jardin3_BIG.jpg",
+    path: "img/bedroom2.jpg",
     caption: "Chambre - vue sur le jardin privatif plein sud"
   },
   {
-    path: "img/cuisine1_BIG.jpg",
+    path: "img/kitchen1.jpg",
     caption: "Cuisine sur mesure neuve - plaques induction"
   },
   {
-    path: "img/cuisine2_BIG.jpg",
+    path: "img/kitchen2.jpg",
     caption: "Cuisine - frigo congélo **** four combiné micro-ondes/ traditionnel"
   },
   {
-    path: "img/sdb1_BIG.jpg",
+    path: "img/kitchen3.jpg",
+    caption: "Cuisine - frigo congélo **** four combiné micro-ondes/ traditionnel"
+  },
+  {
+    path: "img/bathroom1.jpg",
     caption: "Salle de bain"
   },
   {
-    path: "img/sdb2_BIG.jpg",
+    path: "img/bathroom2.jpg",
     caption: "Salle de bain"
   },
   {
-    path: "img/jardin2_BIG.jpg",
-    caption: "Vue jardin depuis chambre plein sud juin 2015"
+    path: "img/garden1.jpg",
+    caption: "Vue jardin depuis chambre plein sud"
   },
   {
-    path: "img/jardin1_HEADER.jpg",
-    caption: "Vue jardin depuis chambre plein sud automne 2015"
+    path: "img/garden2.jpg",
+    caption: "Vue jardin depuis chambre plein sud"
+  },
+  {
+    path: "img/garden3.jpg",
+    caption: "Vue jardin depuis chambre plein sud"
+  },
+  {
+    path: "img/garden4.jpg",
+    caption: "Vue jardin depuis chambre plein sud"
+  },
+  {
+    path: "img/garden5.jpg",
+    caption: "Vue jardin depuis chambre plein sud"
   }
 ];
 
@@ -177,7 +193,7 @@ $arrows.click(function () {
   $lightboxCaption.text(imgRank + "/" + nbImgs + ": " + imgs[imgCounter].caption);
 });
 
-// close the lightbox when clicking off image
+// close the lightbox when clicking off the image
 $clickAnywhereLightbox.click(function (e) {
   "use strict";
   e.stopPropagation(); // avoid multiple click events
@@ -218,8 +234,9 @@ locations.chezDimanche = {
   },
   info: "Gite et Couvert chez Dimanche <br>"
     + "38 rue de Lattre de Tassigny <br>"
-    + "90 850 Essert</p>"
-    + "<p>+33 (0) 6 30 02 76 78<br>"
+    + "90 850 Essert<br><br>"
+    + "+33 6 74 44 63 00<br>"
+    + "+33 9 51 09 35 16<br>"
     + "joellemoner@yahoo.fr"
 };
 
