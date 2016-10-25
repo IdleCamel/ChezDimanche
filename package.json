@@ -10,17 +10,20 @@
     "gulp-cache": "^0.4.5",
     "gulp-concat": "^2.6.0",
     "gulp-copy": "0.0.2",
+    "gulp-data": "^1.2.1",
     "gulp-gh-pages": "^0.5.4",
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-jade": "^1.1.0",
     "gulp-load-plugins": "^1.1.0",
+    "gulp-merge-json": "^0.6.0",
     "gulp-pug": "^3.1.0",
     "gulp-pug-lint": "^0.1.6",
     "gulp-sass": "^2.1.0",
     "gulp-sourcemaps": "^2.0.0",
     "gulp-uglify": "^2.0.0",
-    "gulp-useref": "^3.1.2"
+    "gulp-useref": "^3.1.2",
+    "path": "^0.12.7"
   },
   "scripts": {
     "start": "gulp",
