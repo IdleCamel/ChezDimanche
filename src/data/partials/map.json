@@ -1,0 +1,24 @@
+{
+	"Map": [
+		{
+			"label": "Citadelle de Belfort",
+			"id": "citadelle"
+		},
+		{
+			"label": "Ballon d'Alsace",
+			"id": "ballon"
+		},
+		{
+			"label": "Chapelle Le Corbusier",
+			"id": "chapelle"
+		},
+		{
+			"label": "Sainte-Ursanne",
+			"id": "ursanne"
+		},
+		{
+			"label": "Malsaucy",
+			"id": "malsaucy"
+		}
+	]
+}

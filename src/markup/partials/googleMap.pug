@@ -1,0 +1,7 @@
+div#map
+
+div.legend
+	p Légende
+	each item in Map
+		label=item.label
+			input.checkbox(id=item.id, type="checkbox")

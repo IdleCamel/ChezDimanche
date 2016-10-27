@@ -1,0 +1,20 @@
+mixin pricing
+	table
+		each val, index in Pricing
+			tr
+				td=index
+				td=val
+
+mixin review(item)
+		blockquote(cite="#{item.src}")
+			a(href="#{item.src}", target="_blank")
+				p #{item.citation}
+				cite #{item.author}
+				time #{item.time}
+
+mixin btn-center(id, content)
+	.center-btn
+		button(
+			id=id
+			type="button"
+		)=content

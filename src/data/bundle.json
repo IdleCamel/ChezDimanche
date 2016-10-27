@@ -8,7 +8,41 @@
 			"Notre maison est à l'interface de 2 mondes : LA VILLE, LA CAMPAGNE. Chacun de nos hôtes peut y trouver son compte."
 		]
 	},
+	"Contact": {
+		"post_address": "38 rue de Lattre de Tassigny<br>90850 Essert",
+		"mob_phone": "+33 6 74 44 63 00",
+		"landline": "+33 9 51 09 35 16",
+		"email": "joellemoner@yahoo.fr"
+	},
 	"trilili": "trololo",
+	"Map": [
+		{
+			"label": "Citadelle de Belfort",
+			"id": "citadelle"
+		},
+		{
+			"label": "Ballon d'Alsace",
+			"id": "ballon"
+		},
+		{
+			"label": "Chapelle Le Corbusier",
+			"id": "chapelle"
+		},
+		{
+			"label": "Sainte-Ursanne",
+			"id": "ursanne"
+		},
+		{
+			"label": "Malsaucy",
+			"id": "malsaucy"
+		}
+	],
+	"Pricing": {
+		"1 nuit": "75 €",
+		"2 nuits": "120 €",
+		"3 nuits": "160 €",
+		"7 nuits": "290 €"
+	},
 	"Reviews": [
 		{
 			"src": "https://www.facebook.com/ChezDimanche/reviews",
@@ -46,5 +80,19 @@
 			"time": "Mai 2016",
 			"citation": "Juste parfait !"
 		}
-	]
+	],
+	"Social_Media_Icons": {
+		"facebook": {
+			"img_path": "img/icon-facebook.svg",
+			"url": "https://www.facebook.com/ChezDimanche"
+		},
+		"google_plus": {
+			"img_path": "img/icon-google-plus-green.svg",
+			"url": "https://plus.google.com/103795538890436895710/about"
+		},
+		"instagram": {
+			"img_path": "img/icon-instagram-green.svg",
+			"url": "https://www.instagram.com/gite_chez_dimanche90"
+		}
+	}
 }

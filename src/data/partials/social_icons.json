@@ -1,0 +1,20 @@
+{
+	"Social_Media_Icons": 
+	{
+		"facebook":
+		{
+			"img_path": "img/icon-facebook.svg",
+			"url": "https://www.facebook.com/ChezDimanche"
+		},
+		"google_plus":
+		{
+			"img_path": "img/icon-google-plus-green.svg",
+			"url": "https://plus.google.com/103795538890436895710/about"
+		},
+		"instagram":
+		{
+			"img_path": "img/icon-instagram-green.svg",
+			"url": "https://www.instagram.com/gite_chez_dimanche90"
+		}
+	}
+}
