@@ -52,9 +52,13 @@ gulp.task('get-content', function() {
     .pipe(gulp.dest('src/data/'));
 });
 
-gulp.task('markup', ['get-content'], function() {
+gulp.task('pug-lint', function() {
+  return gulp.src('src/data/markup/**/*.pug')
+    .pipe($.pugLint());
+});
+
+gulp.task('markup', ['get-content', 'pug-lint'], function() {
   return gulp.src('src/markup/index.pug')
-    .pipe($.pugLint())
     .pipe($.data(function(file) {
       return require('./src/data/bundle.json');
     }))

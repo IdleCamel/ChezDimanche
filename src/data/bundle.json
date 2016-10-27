@@ -1,0 +1,50 @@
+{
+	"about": {
+		"paragraphs": [
+			"Mes enfants partis, la retraite arrivée, j'ai eu le projet de faire partager ma maison à des hôtes pour qu'ils puissent découvrir la Franche Comté. Pour nous, elle ressemble pas mal à celle de Tolkien : paysages verdoyants et ondulants, champs nourriciers.",
+			"A l'horizon, au nord, les Vosges du Sud, forêts d'hêtres et de sapins, hautes chaumes parfumées au cumin des prés, sentiers de montagne balisés par le Club Vosgien. Fermes auberges à gogo, tartes aux brimbelles et repas marcaires.",
+			"A l'horizon, au sud, les hauts plateaux du Jura, pâtures à Montbéliardes et Comté, prés de fauche fleuris. Puis toujours les falaises de calcaire blanches bleutées et en bas l'eau verte du Doubs.",
+			"Notre gîte s'appelle ainsi car Dimanche est le nom des derniers locataires qui ont habité la fermette. Nous avons retrouvé leur ancienne plaque de sonnette.",
+			"Notre maison est à l'interface de 2 mondes : LA VILLE, LA CAMPAGNE. Chacun de nos hôtes peut y trouver son compte."
+		]
+	},
+	"trilili": "trololo",
+	"Reviews": [
+		{
+			"src": "https://www.facebook.com/ChezDimanche/reviews",
+			"author": "Edouard Gdn",
+			"time": "Avril 2016",
+			"citation": "Gîte calme, confortable, agréable et tout équipé. Parfait pour un déplacement professionnel et à moins d'une heure des vosges, du Jura et de l'Alsace pour se promener. A 5 min du centre ville de Belfort. Les propriétaires sont très accueillants et sympathiques!! Ne pas hésiter!!"
+		},
+		{
+			"src": "https://www.facebook.com/ChezDimanche/reviews",
+			"author": "Guila Saltos Bukaeva",
+			"time": "Avril 2016",
+			"citation": "J´adore!. Definitivamente recomendable! La casa es una maravilla de lugar, un pequeño tesoro en medio de la naturaleza, la vista es preciosa y el lugar es bastante calmado y a la vez cercano para realizar actividades. Amé cada uno de los detalles de la casa, desde libros, juegos de mesa y la deco vintage (quería fotografiar todo). Las fotos no dan suficiente crédito a lo confortable y hermoso que es el lugar. Joel y Loic son muy amables. Volvería con gusto!"
+		},
+		{
+			"src": "https://www.airbnb.de/rooms/12201373",
+			"author": "Bernard",
+			"time": "Avril 2016",
+			"citation": "Appartement tout neuf et très complet, fidèle à la description. Idéal pour un couple. Joëlle a été très attentive à notre confort et à celui de notre bébé. Elle nous a conseillé sur les bons plans dans la région et prêté toute une série de cartes et de guides. Petit plus : on profite du magnifique jardin composés d’une multitude de plantes basses des propriétaires!"
+		},
+		{
+			"src": "https://www.airbnb.de/rooms/12201373",
+			"author": "Evelyn",
+			"time": "Mai 2016",
+			"citation": "Joelle was a wonderful host who took great care to make us feel very welcome. She made sure we knew how to get to the places we wanted to go and recommended areas to see. Our little home was super cosy and fantastic to stay in. We had a fabulous time!"
+		},
+		{
+			"src": "https://www.airbnb.de/rooms/12201373",
+			"author": "Kristine",
+			"time": "Mai 2016",
+			"citation": "Joëlle was a wonderful host! We arrived quite late in the evening but she stayed up to help us into the flat and showed us around. She even baked us a cake to have for breakfast the next morning. It was a beautiful home and the beds were so comfortable. I would definitely recommend staying here if you're passing through the area. We didn't tour the are, this town was just a mid-point on our road trip and so we stopped here for a bed for the night."
+		},
+		{
+			"src": "https://www.airbnb.de/rooms/12201373",
+			"author": "Bénédicte",
+			"time": "Mai 2016",
+			"citation": "Juste parfait !"
+		}
+	]
+}
