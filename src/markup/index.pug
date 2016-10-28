@@ -1,3 +1,5 @@
+
+
 doctype html
 html.no-js(lang="en")
   head
@@ -7,20 +9,52 @@ html.no-js(lang="en")
     link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Pacifico')
     link(rel='stylesheet', href='css/jquery-ui.min.css')
     link(rel='stylesheet', href='css/app.css')
+    include helper/mixins
 
   body
-
-    include components/header
+    include partials/header
 
     main
 
-      include components/accommodation
-      include components/pricing
-      include components/googleMap
-      include components/testimonials
-      include components/about
-    
-    include components/contact
+      include partials/accommodation
+
+      section#pricing
+        h2 Tarifs
+        +pricing
+
+      section#google-map
+        h2 Plan
+        include partials/googleMap
+
+      section#testimonials
+        h2 Vos commentaires
+        each item in Reviews
+          +review(item)
+        +btn-center(
+          "testimonialsBtn",
+          "Voir les commentaires plus anciens")
+        +btn-center(
+          "testimonialsBtn",
+          "Laisser un commentaire")
+        include partials/testimonials
+
+      section#about
+        h2 À propos
+        div.pic-joelle
+          img(src="img/joelle.jpg", alt="")
+        div.text-box
+          - var paragraphs = about["paragraphs"];
+          each item in paragraphs
+            p=item
+      
+    footer#contact
+      address
+        ul
+          li!=Contact.post_address
+          li=Contact.mob_phone
+          li=Contact.landline
+          li=Contact.email
+      include partials/social_media_icons
 
 
     // build:js js/bundle.js

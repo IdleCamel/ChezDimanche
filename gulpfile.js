@@ -1,6 +1,8 @@
 var     gulp        = require('gulp'),
         $           = require('gulp-load-plugins')(),
-        browserSync = require('browser-sync').create();
+        browserSync = require('browser-sync').create(),
+        path        = require('path'),
+        fs          = require('fs');
 
 var sassPaths = [
   'bower_components/foundation-sites/scss',
@@ -24,7 +26,7 @@ gulp.task('sass', function() {
 });
 
 
-gulp.task('deploy', function() {
+gulp.task('deploy', ['build'], function() {
   console.log('deploy task running');
   return gulp.src('./dist/**/*')
     .pipe($.ghPages());
@@ -44,9 +46,22 @@ gulp.task('scripts', function() {
   // minify/uglify
 });
 
-gulp.task('markup', function() {
+gulp.task('get-content', function() {
+  return gulp.src('src/data/partials/*.json')
+    .pipe($.mergeJson('bundle.json'))
+    .pipe(gulp.dest('src/data/'));
+});
+
+gulp.task('pug-lint', function() {
+  return gulp.src('src/data/markup/**/*.pug')
+    .pipe($.pugLint());
+});
+
+gulp.task('markup', ['get-content', 'pug-lint'], function() {
   return gulp.src('src/markup/index.pug')
-    .pipe($.pugLint())
+    .pipe($.data(function(file) {
+      return require('./src/data/bundle.json');
+    }))
     .pipe($.pug({
       pretty: true
     }))
