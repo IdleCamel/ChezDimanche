@@ -2,6 +2,7 @@
 // ==============
 $green: #27ae60;
 $white: #fff;
+$light-grey: #e6e6e6;
 $color-btn-bg: $green;
 $color-btn-txt: $white;
 
@@ -26,6 +27,7 @@ button:not(.close-button) {
 
 header{
   height: 100vh;
+
 }
 
 main {
@@ -61,10 +63,35 @@ main {
   }
 }
 
-#jquery-datepicker {
-  display: flex;
-  justify-content: center;
-  margin-top: 3rem;
+
+// TODO: add a .accordion class and make a partial
+#accommodation {
+  h4 {
+    &:hover {
+      background-color: $light-grey;
+      cursor: pointer;
+    }
+    &:after {
+      // CSS triangle hack: https://css-tricks.com/snippets/css/css-triangle/
+      content: "";
+      height: 0;
+      width: 0;
+      display: inline-block;
+      margin-left: 10px;
+      margin-bottom: 2px;
+      border-left: 7px solid transparent;
+      border-right: 7px solid transparent;
+      border-top: 7px solid $primary-color;
+    }
+    .description-toggle { // toggle display with js
+      display: none;
+    }
+  }
+
+  // TODO: move to lightbox partial
+  img {
+    cursor: pointer;
+  }
 }
 
 footer {
@@ -76,6 +103,16 @@ footer {
 
 strong {
   color: $primary-color;
+}
+
+header > h1 {
+  text-shadow: 0 0 20px #000;
+
+  > .slogan {
+    display: block;
+    font-size: 70%;
+    margin-top: 2rem;
+  }
 }
 
 h2 {
@@ -104,8 +141,15 @@ footer {
 // Colors and backgrounds
 // =========================
 
+
 body {
   background-color: #ddd;
+}
+
+header {
+  // TODO: move import to 'app.scss'
+  @import 'hero_img';
+  @include hero-img();
 }
 
 main {
