@@ -11,3 +11,60 @@
     bottom: $bottom;
     right: $right;
 }
+
+// flexbox mixins
+// ==============
+// 
+// display: flex
+// flex-direction: row | row-reverse | column | column-reverse
+// flex-wrap: nowrap | wrap | wrap-reverse
+    // flex-flow: <‘flex-direction’> || <‘flex-wrap’>
+// justify-content: flex-start | flex-end | center | space-between | space-around
+// align-items: flex-start | flex-end | center | baseline | stretch
+// align-content: flex-start | flex-end | center | space-between | space-around | stretch
+
+@mixin flex-row(
+    $flex-wrap: nowrap,
+    $justify-content: flex-start,
+    $align-items: flex-start,
+    $align-content: flex-start
+) {
+    display: flex;
+    flex-flow: row $flex-wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+}
+
+@mixin flex-col(
+    $flex-wrap: nowrap,
+    $justify-content: flex-start,
+    $align-items: flex-start,
+    $align-content: flex-start
+) {
+    display: flex;
+    flex-flow: column $flex-wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    align-content: $align-content;
+}
+
+@mixin button(
+    $color: $color-btn-txt,
+    $bg-color: $color-btn-bg,
+    $bg-color-hover: darken($color-btn-bg, 10%)
+) {
+    color: $color;
+    background-color: $bg-color;
+    display: inline-block;
+    text-align: center;
+    line-height: 1;
+    cursor: pointor;
+    font-size: 0.9rem;
+    padding: rem-calc(14);
+    transition: background-color 0.25s ease-out;
+
+    &:hover {
+        background-color: darken($bg-color, 10%);
+    }
+}

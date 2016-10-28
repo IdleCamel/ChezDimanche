@@ -1,0 +1,42 @@
+
+@mixin hero-img {
+background: {
+    image: linear-gradient(
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)),
+      url(../img/header_landscape_small.jpg);
+    position: center;
+    size: cover;}
+    
+    // adapting header background-img to device size
+    @media screen and #{breakpoint(portrait)} {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url(../img/header_portrait_small.jpg);}
+    
+    @media screen and #{breakpoint(medium)} and #{breakpoint(landscape)} {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url(../img/header_landscape_medium.jpg);}
+        
+    @media screen and #{breakpoint(medium)} and #{breakpoint(portrait)} {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url(../img/header_portrait_medium.jpg);}
+        
+    @media screen and #{breakpoint(large)} and #{breakpoint(landscape)} {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url(../img/header_landscape_large.jpg);}
+        
+    @media screen and #{breakpoint(large)} and #{breakpoint(portrait)} {
+      background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)),
+        url(../img/header_portrait_XL.jpg);
+    }
+}

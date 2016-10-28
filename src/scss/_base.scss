@@ -1,65 +1,117 @@
-// 1. SCAFFOLDING
-// --------------------
-body {
-  background-color: #ddd;
+// Variables
+// ==============
+$green: #27ae60;
+$white: #fff;
+$color-btn-bg: $green;
+$color-btn-txt: $white;
+
+
+
+// 1. Basic styles
+// ==================
+
+button:not(.close-button) {
+  @include button();
+}
+.center-btn {
+  @include flex-row(nowrap, center, center);
+}
+
+
+
+
+
+// Layout
+// =================
+
+header{
+  height: 100vh;
 }
 
 main {
-  max-width: 750px;
+  max-width: 800px;
   margin: 0 auto;
-  z-index: 0;
-  padding: 0 0.6275rem; // 10px
-  background-color: #fff;
+  padding: 0 rem-calc(10);
+
   @include breakpoint(medium){
-    padding-left: 15px;
-    padding-right: 15px;}
-} //main
-  
-section {
-  padding: 30px 0;}
+    padding: 0 rem-calc(30);
+  }
+  @include breakpoint(large){
+    padding: 0 rem-calc(60);
+  }
 
-footer {
-  padding: 10px 0;}
-    
-h2 {
-  text-align: center;
-  margin-bottom: 2rem;}
+  section {
+    padding: rem-calc(30) 0;
+  }
+}
 
-h4, h5, h6 {
-  font-family: $body-font-family;}
-  
-button:not(.close-button) {
-  @include button-base;
-  @include button-style($primary-color, darken($primary-color, 10%), $white);
-  margin-top: 1rem}
+#about {
+  img {
+    border-radius: 150px;
+    width: 200px;
+    display: block;
+    margin: 0 auto 1rem;
 
-.center-btn {
-  @include flex;
-  @include flex-align(center, middle);}
-
-strong {
-  color: $primary-color;}
-
-p, li, a {
-  font-size: 0.9275rem; //15px
-  
-  @include breakpoint(medium) {
-    font-size: 1rem;}} 
-
-
-// 5. SECTION #PRICING
-// --------------------
-
-// keeping default Foundation styles for pricing table
-
-// styling jQuery DatePicker
-
-//.ui-datepicker-calendar > tbody > tr > .not-available > span {
-  //background-color: rgba(255, 0, 0, 0.3);
-//}
+    @include breakpoint(medium) {
+      float: right;
+      width: 300px;
+      margin-left: 15px;
+      margin-bottom: 15px;
+    }
+  }
+}
 
 #jquery-datepicker {
   display: flex;
   justify-content: center;
   margin-top: 3rem;
 }
+
+footer {
+  padding: 10px 0;
+}
+
+// Typography
+// ===============
+
+strong {
+  color: $primary-color;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+h4, h5, h6 {
+  font-family: $body-font-family;
+}
+
+h3 {
+  margin-left: -5px;
+  margin-top: 1.75rem;
+
+  @include breakpoint(medium) {
+    margin-left: -10px;
+  }
+}
+
+footer {
+  text-align: center;
+  font-weight: 500;
+}
+
+// Colors and backgrounds
+// =========================
+
+body {
+  background-color: #ddd;
+}
+
+main {
+  background-color: #fff;
+}
+
+footer {
+  background-color: $primary-color;
+  color: $white;}
