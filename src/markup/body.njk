@@ -1,0 +1,75 @@
+{% extends 'base.njk' %}
+
+<header>
+	{% include 'partials/nav.njk' %}
+
+	<h1>
+		<span class="brand-name">{{ Header.title }}</span>
+		<span class="slogan">{{ Header.subtitle }}</span>
+	</h1>
+
+	<button class="lightbox-open">Voir les photos</button>
+
+	{% include 'social_media_icons.njk' %}
+</header>
+
+<main>
+	
+	<section id="accommodation">
+		<h2>Le Gite</h2>
+
+		<div id="summary">
+			<h3>L'essentiel</h3>
+			{% include 'partials/description_list.njk' %}
+		</div>
+
+		<div id="photo-gallery">
+			<h3>Galerie photos</h3>
+			<div class="img-container"></div>
+		</div>
+
+		<div id="description">
+			<h3>Description</h3>
+		</div>
+	</section>
+
+	<section id="pricing">
+		<h2>Tarifs</h2>
+		{% include 'partials/table.njk' %}
+	</section>
+
+	<section id="google-map">
+		<h2>Plan</h2>
+		<div id="map"></div>
+		{% include 'partials/legend.njk' %}
+
+	</section>
+
+	<section id="testimonials">
+		<h2>Vos commentaires</h2>
+		{% for item in Reviews %}
+			{% include 'partials/review.njk'
+				with {
+					item: item
+				}
+			 %}
+		{% endfor %}
+	</section>
+
+	<section id="about">
+
+		<h2>À propos</h2>
+
+		<div class="pic-joelle">
+			<img src="img/joelle.jpg" alt="">
+		</div>
+
+
+	</section>
+
+</main>
+
+<footer id="contact">
+	{% include 'partials/contact_list.njk' %}
+	{% include 'partials/social_media_icons.njk' %}
+</footer>

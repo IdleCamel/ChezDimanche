@@ -1,12 +1,13 @@
 
-@mixin hero-img {
-background: {
+.header-bg {
+  background: {
     image: linear-gradient(
       rgba(0, 0, 0, 0.5),
       rgba(0, 0, 0, 0.5)),
       url(../img/header_landscape_small.jpg);
     position: center;
-    size: cover;}
+    size: cover;
+  }
     
     // adapting header background-img to device size
     @media screen and #{breakpoint(portrait)} {

@@ -27,14 +27,27 @@ button:not(.close-button) {
 
 header{
   height: 100vh;
+  @extend .header-bg;
+  position: relative;
+  @include flex-row(nowrap, center, center);
 
+  .text-box {
+
+  }
+  
+  .lightbox-open {
+    @include position(absolute, $bottom: 30px, $left: 30px);
+  }
+
+  .social_media_icons {
+    @include position(absolute, $bottom: 30px, $right: 30px);
+  }
 }
 
 main {
   max-width: 800px;
   margin: 0 auto;
   padding: 0 rem-calc(10);
-
   @include breakpoint(medium){
     padding: 0 rem-calc(30);
   }
@@ -45,6 +58,7 @@ main {
   section {
     padding: rem-calc(30) 0;
   }
+
 }
 
 #about {
@@ -146,11 +160,6 @@ body {
   background-color: #ddd;
 }
 
-header {
-  // TODO: move import to 'app.scss'
-  @import 'hero_img';
-  @include hero-img();
-}
 
 main {
   background-color: #fff;

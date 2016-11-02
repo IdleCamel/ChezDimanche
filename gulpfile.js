@@ -9,6 +9,30 @@ var sassPaths = [
   'bower_components/motion-ui/src'
 ];
 
+var ifCond = function (v1, operator, v2, options) {
+
+    switch (operator) {
+        case '==':
+            return (v1 == v2) ? options.fn(this) : options.inverse(this);
+        case '===':
+            return (v1 === v2) ? options.fn(this) : options.inverse(this);
+        case '<':
+            return (v1 < v2) ? options.fn(this) : options.inverse(this);
+        case '<=':
+            return (v1 <= v2) ? options.fn(this) : options.inverse(this);
+        case '>':
+            return (v1 > v2) ? options.fn(this) : options.inverse(this);
+        case '>=':
+            return (v1 >= v2) ? options.fn(this) : options.inverse(this);
+        case '&&':
+            return (v1 && v2) ? options.fn(this) : options.inverse(this);
+        case '||':
+            return (v1 || v2) ? options.fn(this) : options.inverse(this);
+        default:
+            return options.inverse(this);
+    }
+}
+
 gulp.task('sass', function() {
   return gulp.src('src/scss/app.scss')
     .pipe($.sass({
@@ -55,6 +79,18 @@ gulp.task('get-content', function() {
 gulp.task('pug-lint', function() {
   return gulp.src('src/data/markup/**/*.pug')
     .pipe($.pugLint());
+});
+
+gulp.task('handlebars', ['get-content'], function() {
+  return gulp.src('src/markup/index.handlebars')
+    .pipe($.data(function(file) {
+      return require('./src/data/bundle.json');
+    }))
+    .pipe($.compileHandlebars({}, {
+      helpers: {ifCond: ifCond}
+    }))
+    .pipe($.rename('index.html'))
+    .pipe(gulp.dest('dist/handlebars/'));
 });
 
 gulp.task('markup', ['get-content', 'pug-lint'], function() {
