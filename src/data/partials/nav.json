@@ -1,0 +1,28 @@
+{
+	"Nav": [
+		{
+			"id": "accommodation",
+			"text": "Le gite"
+		},
+		{
+			"id": "pricing",
+			"text": "Tarifs"
+		},
+		{
+			"id": "google-map",
+			"text": "Plan"
+		},
+		{
+			"id": "testimonials",
+			"text": "Commentaires"
+		},
+		{
+			"id": "about",
+			"text": "À propos"
+		},
+		{
+			"id": "contact",
+			"text": "Contact"
+		}
+	]
+}

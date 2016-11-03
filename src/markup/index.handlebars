@@ -13,27 +13,27 @@
     
     
     <header>
-      
-      <nav>
+      <nav class="Nav">
         <div id="menu-toggle">menu</div>
         <ul>
-          <li><a href="#accommodation">Le gite</a></li>
-          <li><a href="#pricing">Tarifs</a></li>
-          <li><a href="#google-map">Plan</a></li>
-          <li><a href="#testimonials">Commentaires</a></li>
-          <li><a href="#about">À propos</a></li>
-          <li><a href="#contact">Contact</a></li>
+          {{#each Navigation}}
+          <li>
+            <a href="#{{id}}">{{text}}</a>
+          </li>
+          {{/each}}
         </ul>
       </nav>      
       
-      <h1>
+      <h1 class="Main_Header">
         <span class="brand-name">{{{Header.title}}}</span>
         <span class="slogan">{{{Header.subtitle}}}</span>
       </h1>
-      
     </header>
     
+
+
     <main>
+
       <section id="accommodation">
         <h2>Le Gite</h2>
         
@@ -56,6 +56,7 @@
         <div class="center-btn">
           <button class="lightbox-open">Voir les photos</button>
         </div>
+
         <div id="lightbox">
           
           <div id="fig-container">
@@ -76,69 +77,6 @@
           Meublé de tourisme classé 3 ***, tout juste rénové, le gite occupe le RDC d'une ancienne ferme dans le vieux Essert. L’entrée est indépendante.<br>
           Il convient au <strong>tourisme</strong> comme au <strong>déplacement professionnel</strong>.
         </p>
-        
-        <h4>Le gite</h4>
-        <div class="description-toggle">
-          <p>
-          Le <strong>salon</strong>, spacieux, offre :
-          <ul>
-            <li>un <strong>coin télé/multimédia</strong> avec 2 fauteuils convertibles en lits de 80*200, literie neuve</li>
-            <li>un <strong>coin lecture</strong> près des 2 fenêtres </li>
-            <li>un <strong>coin repas</strong> donnant sur une kitchenette.</li>
-          </ul>
-          </p>
-          <p>La <strong>kitchenette</strong> : 2 plaques induction, four micro ondes combiné traditionnel, hotte, lave-linge.</p>
-          <p>La <strong>chambre</strong>, literie neuve, 140*190, ouvre sur un jardin privatif. </p>
-          <p><strong>Jardin privatif</strong> équipé d’un salon de jardin et barbecue. </p>
-        </div>
-        
-        
-        <h4>Équipement</h4>
-        <div class="description-toggle">
-          <p>VMC dans tout le logement. </p>
-          <p><strong>Équipement de base</strong>: Le linge de toilette, les draps, les torchons de cuisine sont fournis.</p>
-          <p><strong>Équipement bébé</strong> (lit, chaise, baignoire) à disposition.</p>
-          <p>Côté rue, <strong>place de parking privative</strong> juste devant le gite.</p>
-          <p>Possibilité de ranger les vélos dans le <strong>garage à vélo</strong>.</p>
-          <p>Table de ping-pong côté rue.</p>
-          <p>J'habite à côté et suis prête à aider dans la mesure de mes capacités.</p>
-        </div>
-        
-        <h4>Arriver, se déplacer</h4>
-        <div class="description-toggle">
-          <p>Notre gite se situe dans le vieux Essert, près de la Mairie, de l'école primaire, de l'église, et du lavoir.</p>
-          <p>Bus : arrêt à 500m du gite. Possibilité de prendre le bus depuis la gare de Belfort ville (3km) ou la gare TGV Belfort-Montbéliard (12km).</p>
-          <p>Location de vélos Optymo sur la place de la Mairie (5mn à pied du gite).</p>
-          <p>Location de voitures à Super U Essert (1,5km). Téléphoner 48h à l'avance</p>
-          <p>Essert : commune péri-urbaine de Belfort (50 000 habitants). À Essert même : tout commerce et commodité.</p>
-        </div>
-        
-        <h4>Les environs</h4>
-        <div class="description-toggle">
-          <p>en haut de la rue Coulée Verte pour le « running » avec côté Haute Saône le Salbert 651m), et côté Belfort le Parc de la Douce.</p>
-          <p>
-            Le gite est à :
-            <ul>
-              <li>3 km du centre ville de Belfort</li>
-              <li>1 km d'un complexe sportif (Parc de la Douce) comportant patinoire , tennis, piscine</li>
-              <li>3 km de Bavilliers : centre equestre, parc des daims, parc aventure (tyroliennes, ponts de singe)</li>
-              <li>20 km du golf de Rougemont le Château.</li>
-            </ul>
-          </p>
-          <p>
-            Par ailleurs, 
-            <ul>
-              <li>Randonnées: le chemin de St Jacques de Compostelle, la randonnée des forts, le GR5 (Hollande -Méditerranée) passent devant le gite.</li>
-              <li>l'EuroVelo 6 (voie cyclable Atlantique-Mer Noire) emprunte la Coulée Verte à 300 m du gite.</li>
-              <li>Le lac de Malsaucy (baignade, kayak, voile, mini golf, vélo,maison de l'environnement) est à 7km. Balade sympa depuis le gite pour s'y rendre en vélo.</li>
-              <li>À 5km, le fort du Salbert domine de plus de 300m les plaines environnantes (piste de VTT de descente).</li>
-            </ul>
-          </p>
-          <p>
-            Les Vosges, la Haute Saône, le Jura franco-suisse (Saint Ursanne, bourg médiéval ), l'Alsace, l'Allemagne, Bâle, les stations de ski familiales du Ballon d'Alsace, de la Planche Des Belles Filles, la chapelle Le Corbusier à Ronchamp, le Lion de Belfort, les Eurockéennes, le Fimu, le marché de Noël à Montbéliard, le musée Peugeot à Sochaux, la cité du train, le zoo à Mulhouse, la Citadelle de Besançon, le plateau des 1000 étangs, la réserve naturelle nationale des ballons comtois en Franche Comté ; les forêts et ruisseaux du piémont vosgien ; la vallée du Doubs :
-            <span>Tout est à moins d'une heure de route !</span>
-          </p>
-        </div>
 
         {{#each Description}}
           <h4>{{{headline}}}</h4>
@@ -157,11 +95,14 @@
             {{/each}}
           </div>
         {{/each}}
+
       </section>
       
+
+
       <section id="pricing">
         <h2>Tarifs</h2>
-        <table>
+        <table class="Pricing">
         {{#each Pricing}}
           <tr>
             <td>{{{@key}}}</td>
@@ -172,12 +113,14 @@
         <!-- <div id="jquery-datepicker"></div> -->
       </section>
       
+
+
       <section id="google-map">
         <h2>Plan</h2>
 
         <div id="map"></div>
 
-        <div class="legend">
+        <div class="Legend">
           <p>Légende</p>
           {{#each Map}}
             <label>
@@ -216,7 +159,7 @@
         <h2>À propos</h2>
 
         <div class="pic-joelle">
-          <img src="img/joelle.jpg" alt="A picture of my husband and myself">
+          <img src="img/joelle.jpg">
         </div>
 
         <div class="text-box">
@@ -229,20 +172,13 @@
     </main>
     
     <footer id="contact">
-      <address>
+      <address class="Address">
         <ul>
-          <li>Gite et Couvert chez Dimanche</li>
-          <li>38 rue de Lattre de Tassigny</li>
-          <li>90850 Essert</li>
-          <li>FRANCE</li>
+          {{#each Contact}}
+          <li>{{this}}</li>
+          {{/each}}
         </ul>
-        <ul>
-          <li>+33 6 74 44 63 00</li>
-          <li>+33 9 51 09 35 16</li>
-          <li>
-            <a href="mailto:joellemoner@yahoo.fr">joellemoner@yahoo.fr</a>
-          </li>
-        </ul>
+      </address>
         <ul class="social-media-icons">
           <li>
             <a href="https://www.facebook.com/ChezDimanche/" target="_blank"><img src="img/social-1_logo-facebook.svg" alt="Facebook icon"></a>
@@ -254,7 +190,6 @@
             <a href="https://www.instagram.com/gite_chez_dimanche90/" target="_blank"><img src="img/social-1_logo-instagram.svg" alt="Instagram icon"></a>
           </li>
         </ul>
-      </address>
     </footer>
     
     <!-- build:js js/bundle.js -->

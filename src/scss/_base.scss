@@ -5,6 +5,9 @@ $white: #fff;
 $light-grey: #e6e6e6;
 $color-btn-bg: $green;
 $color-btn-txt: $white;
+$color-strong: $green;
+$color-bg-footer;
+$color-txt-white: $white;
 
 
 
@@ -31,9 +34,6 @@ header{
   position: relative;
   @include flex-row(nowrap, center, center);
 
-  .text-box {
-
-  }
   
   .lightbox-open {
     @include position(absolute, $bottom: 30px, $left: 30px);
@@ -119,15 +119,6 @@ strong {
   color: $primary-color;
 }
 
-header > h1 {
-  text-shadow: 0 0 20px #000;
-
-  > .slogan {
-    display: block;
-    font-size: 70%;
-    margin-top: 2rem;
-  }
-}
 
 h2 {
   text-align: center;
@@ -166,5 +157,6 @@ main {
 }
 
 footer {
-  background-color: $primary-color;
-  color: $white;}
+  background-color: $color-bg-footer;
+  color: $color-txt-white;
+}
